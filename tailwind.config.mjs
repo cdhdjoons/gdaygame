@@ -27,8 +27,12 @@ export default {
         'xs': {'max': '345px'}, // 345px 이하일 때 적용
       },
       backgroundImage: {
-        'multi-gradient': 'radial-gradient(circle, #57B2FB80, #7E8FF480, #7E68E780, #DE85A180, #F5BB5080)',
-      }
+        'multi-gradient': 'radial-gradient(ellipse at center, #FF4E51, #FF5646, #FF7733)',
+        'center-gradient': 'radial-gradient(ellipse 80% 50% at center, #FF68FE, #FF3DFF, #FF4E51, #FF7733)',
+      },
+      borderRadius: {
+        'ellipse': '60% / 30%', // 가로 50%, 세로 30%로 더 뾰족한 타원
+      },
     },
   },
   plugins: [],

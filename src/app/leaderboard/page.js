@@ -11,7 +11,7 @@ export default function LeaderBoard() {
     const [teleId, setTeleId] = useState('unknown');
     const [rank, setRank] = useState(0);
     //홀더 숫자 상승 
-    const [holderCount, setHolderCount] = useState(110);
+    const [holderCount, setHolderCount] = useState(100);
 
     useEffect(() => {
         // 초기 n2o 값 불러오기
@@ -46,7 +46,7 @@ export default function LeaderBoard() {
                         setTeleId(user.user.first_name);
                     } else {
                         setTeleId('--')
-                        setN2O(0)
+                        setN2O(5000)
                     }
                 }
             } else {
@@ -67,20 +67,19 @@ export default function LeaderBoard() {
             >
                 <div className=" w-full h-full max-w-[500px] relative flex flex-col justify-evenly items-center " >
                     <div className="w-[90%] max-w-[500px] px-[3%] flex flex-col items-start relative ">
-                        <div className="w-[50vmin] sm:w-[40vmin] aspect-[353/99] relative">
+                        <div className="w-full aspect-[510/165] relative">
                             <Image
-                                src="/image/ghibli_title_logo.png"
+                                src="/image/gday_title_logo.png"
                                 alt="main logo"
                                 layout="fill"
                                 objectFit="cover"
                             />
-                            <p className="text-white absolute right-[5%] text-[3.5vmin] sm:text-[2.5vmin] xs:text-[4.5vmin]">Leaderboard</p>
                         </div>
                     </div>
                     <div className=" flex flex-col items-center ">
                         <div className=" w-[25vmax] sm:w-[20vmax] aspect-[264/264] relative active:scale-90 transition-transform duration-200">
                             <Image
-                                src="/image/pdb_rankcircle_border.png"
+                                src="/image/gday_rankcircle_border.png"
                                 alt="main logo"
                                 layout="fill"
                                 objectFit="fill"
@@ -92,9 +91,9 @@ export default function LeaderBoard() {
                             >
                                 <defs>
                                     <linearGradient id="gradientColors" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" stopColor="#F5C150" />
-                                        <stop offset="50%" stopColor="#7E68E7" />
-                                        <stop offset="100%" stopColor="#57B2FB" />
+                                        <stop offset="0%" stopColor="#BD2321" />
+                                        <stop offset="50%" stopColor="#FFFFFF" />
+                                        <stop offset="100%" stopColor="#FFFFFF" />
                                     </linearGradient>
                                 </defs>
                                 {/* 배경 원 */}
@@ -123,20 +122,20 @@ export default function LeaderBoard() {
                             <div className=" absolute left-[50%] top-[50%] p-[4%] -translate-y-[50%] -translate-x-[50%] w-[90%] h-[90%] rounded-full ">
                                 <div className="w-full aspect-[1/1] relative rounded-full ">
                                     <Image
-                                        src="/image/ghabli_rank_icon.png"
+                                        src="/image/gday_intro_logo.png"
                                         alt="main logo"
                                         layout="fill"
                                         objectFit="fill"
                                     />
                                 </div>
                             </div>
-                            <p className=" absolute bottom-[-8%] left-[50%] -translate-x-1/2 text-[#7EFFCC] text-[3.5vmin] sm:text-[1.5vmin]">{teleId === undefined ? '--' : teleId}</p>
+                            <p className=" absolute bottom-[-8%] left-[50%] -translate-x-1/2 text-white text-[3.5vmin] sm:text-[1.5vmin]">{teleId === undefined ? '--' : teleId}</p>
                             <div className=" absolute bottom-[5%] left-[50%] -translate-x-1/2 flex gap-[5px] z-[100]">
-                                <p className=" text-[#7EFFCC] text-[2.8vmin] sm:text-[1vmin]">Rank</p>
-                                <p className=" text-[#7EFFCC] text-[2.8vmin] sm:text-[1vmin]">{rank}</p>
+                                <p className=" text-white text-[2.8vmin] sm:text-[1vmin]">Rank</p>
+                                <p className=" text-white text-[2.8vmin] sm:text-[1vmin]">{rank}</p>
                             </div>
                             <div className=" absolute bottom-[-20%] left-[50%] -translate-x-1/2 flex justify-between items-center gap-[5px]">
-                                <p className=" text-[#7EFFCC] text-[4.8vmin] sm:text-[2vmin]">{n2o}</p>
+                                <p className=" text-white text-[4.8vmin] sm:text-[2vmin]">{n2o}</p>
                             </div>
                         </div>
                     </div>
@@ -146,9 +145,9 @@ export default function LeaderBoard() {
                         <div className="scroll-container w-[85%] h-[95%] flex flex-col gap-3 overflow-scroll overflow-x-hidden">
                             {rankerDb.map((ranker, index) => (
                                 <div key={ranker.name} className="w-full flex justify-stretch items-center " >
-                                    <div className=" relative w-[20%] aspect-[98/101]">
+                                    <div className=" relative w-[20%] aspect-[75/72]">
                                         <Image
-                                            src="/image/ghibli_game.png"
+                                            src="/image/gday_ticket_icon.png"
                                             alt="main logo"
                                             layout="fill"
                                             objectFit="cover"

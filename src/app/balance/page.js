@@ -119,22 +119,21 @@ export default function Balance() {
         exit={{ opacity: 0 }}
         transition={{ duration: 1 }}
       >
-        <div className="w-full h-full relative flex flex-col items-center justify-evenly " >
+        <div className="w-full h-full relative flex flex-col items-center justify-center  " >
           <div className="w-[90%] max-w-[500px] px-[3%] flex flex-col items-start relative ">
-            <div className="w-[50vmin] sm:w-[40vmin] aspect-[353/99] relative">
+            {/* <div className="w-full aspect-[510/165] relative">
               <Image
-                src="/image/ghibli_title_logo.png"
+                src="/image/gday_title_logo.png"
                 alt="main logo"
                 layout="fill"
                 objectFit="cover"
               />
-              <p className="text-white absolute right-[5%] text-[3.5vmin] sm:text-[2.5vmin] xs:text-[4.5vmin]">AI center</p>
-            </div>
+            </div> */}
           </div>
-          <div className="w-full h-[85%] py-[2%] flex justify-center items-center relative">
+          <div className="w-full h-[90%] flex justify-center items-center relative">
             <iframe
-              className={` bg-white h-full w-[90%] p-[1%] rounded-[23px] flex flex-col gap-[2%] justify-between`}
-              src="https://www.aighibli.io/chat/ai_tele" // 원하는 웹사이트 URL
+              className={` bg-white h-full w-[95%] p-[1%] rounded-[10px]`}
+              src="https://www.g8dai.xyz/ai" // 원하는 웹사이트 URL
               title="External Website"
             />
           </div>

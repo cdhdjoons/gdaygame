@@ -106,7 +106,7 @@ export default function ClaimTimer() {
 
     const handleN2O = () => {
         const currentN2O = localStorage.getItem("n2o");
-        const newN2O = (Number(currentN2O) || 0) + 2000; // 🔥 기존 값에 1000 더함
+        const newN2O = (Number(currentN2O) || 0) + 2000; // 🔥 기존 값에 2000 더함
         localStorage.setItem("n2o", newN2O); // 🔥 업데이트된 값 저장
         setN2O(newN2O); // 🔥 상태 업데이트
 
@@ -139,62 +139,12 @@ export default function ClaimTimer() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
             >
-                <div className="w-full h-[15%] flex justify-center items-center relative ">
-                    <div className="w-[90%] py-[5%] h-full sm:w-[90%] relative flex flex-col justify-between items-center rounded-[23px] bg-mainBoxBg">
-                        <div className="w-full flex justify-center gap-[10%] items-center  ">
-                            <p className="  text-[#E1FF41] text-[4.5vmin] sm:text-[2.5vmin] font-bold">Earn GHIB</p>
-                            <p className=" text-[#808080] text-[4.5vmin] sm:text-[2.5vmin] font-bold ">{formatTime(time)}</p>
-                        </div>
-                        <div className="w-full relative flex justify-center py-[2%] items-end ">
-                            <div className="w-[80%] h-[1vmin] xs:h-[0.8vmin] sm:h-[0.7vmin] rounded-3xl bg-[#787880] relative ">
-                                <div className="w-full bg-[#007AFF] rounded-3xl h-full absolute left-0" style={{ width: progressWidth }}></div>
-                                <div className="w-[4vmin] sm:w-[2.5vmin] aspect-[1/1] bg-white rounded-full absolute -top-[150%] xs:-top-[200%] sm:-top-[150%]" style={{ left: progressWidth }}></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="w-full h-[40%] flex justify-center items-center relative">
-                    <div className={` h-full w-[90%] px-[3%] py-[5%] rounded-[23px] flex flex-col gap-[2%] justify-between bg-no-repeat bg-cover`}
-                    style={{backgroundImage: 'url(/image/ghibli_claim_bg.png)'}}
-                    >
-                        <div className="w-full px-[3%] rounded-[23px] flex items-center relative ">
-                            <div className=" w-full flex justify-between z-10 ">
-                                <div className="w-full aspect-[353/99] relative  ">
-                                    <Image
-                                        src="/image/ghibli_title_logo.png"
-                                        alt="main logo"
-                                        layout="fill"
-                                        objectFit="cover"
-                                    />
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div className="w-full h-[20%] px-[3%] py-2 flex flex-col justify-center text-center items-center relative ">
-                            <p className="w-full text-white text-[4vmin] sm:text-[2.5vmin]">Where AI Meets Imagination</p>
-                            <p className="w-full text-white text-[3vmin] sm:text-[1.5vmin]">Earn points to start conversations with AI agents.</p>
-                        </div>
-                        <div className="w-full h-[15%] flex justify-center relative gap-[5%]  ">
-                            {onClaim ? <div onClick={startTimer} className="w-[45%] rounded-[24px] py-2  flex flex-col justify-center items-center relative bg-[#C9FF93] active:scale-90 transition-transform duration-100">
-                                <p className=" text-black text-[3.5vmin] sm:text-[1.5vmin] z-10">Claim now</p>
-                            </div> :
-                                <div className="w-[45%] rounded-[24px] py-2  flex flex-col justify-center items-center relative bg-[#C9FF93] active:scale-90 transition-transform duration-100">
-                                    <p className=" text-black text-[3.5vmin] sm:text-[1.5vmin] z-10">On Claim</p>
-                                </div>
-                            }
-
-                            <Link href="/daily" className="w-[45%] rounded-[24px] py-2 flex flex-col justify-center items-center relative bg-[#34FA9E] active:scale-90 transition-transform duration-100">
-                                <p className=" text-black text-[3.5vmin] sm:text-[1.5vmin]">Get Tickets</p>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-                <div className=" w-[90%] h-[15%] flex justify-between  ">
+                <div className=" w-[90%] h-[15%] flex justify-between ">
                     <div className=" py-2 bg-mainBoxBg rounded-[23px] w-[47%] flex flex-col justify-center items-center relative">
                         <div className=" w-full flex justify-center gap-[10%]">
-                            <div className="w-[8vmin] sm:w-[6vmin] aspect-[98/101] relative  ">
+                            <div className="w-[9vmin] sm:w-[6vmin] aspect-[72/74] relative  ">
                                 <Image
-                                    src="/image/ghibli_game.png"
+                                    src="/image/gday_game.png"
                                     alt="main logo"
                                     layout="fill"
                                     objectFit="cover"
@@ -204,13 +154,13 @@ export default function ClaimTimer() {
                mt-1 `}>{n2o >= 1000000 ? `${n2o / 1000000}m` : n2o >= 1000 ? `${n2o / 1000}k` : n2o}</p>
                         </div>
                         <p className=" w-full py-[2%] mt-[4%] text-center text-white text-[3.8vmin] xs:text-[4.5vmin] sm:text-[2.3vmin]
-                        active:scale-90 transition-transform duration-200">Your GHIB Point</p>
+                        active:scale-90 transition-transform duration-200">Your G8D Point</p>
                     </div>
                     <div className=" py-2 bg-mainBoxBg rounded-[23px] w-[47%] flex flex-col justify-center items-center relative">
                         <div className=" w-full flex justify-center gap-[10%]">
-                            <div className="w-[9vmin] sm:w-[7vmin] aspect-[90/72] relative  ">
+                            <div className="w-[9vmin] sm:w-[7vmin] aspect-[75/72] relative  ">
                                 <Image
-                                    src="/image/ghabli_ticket_icon.png"
+                                    src="/image/gday_ticket_icon.png"
                                     alt="main logo"
                                     layout="fill"
                                     objectFit="cover"
@@ -222,18 +172,66 @@ export default function ClaimTimer() {
                         active:scale-90 transition-transform duration-200">Your Tickets</p>
                     </div>
                 </div>
+                <div className="w-full h-[15%] flex justify-center items-center relative ">
+                    <div className="w-[90%] py-[5%] h-full sm:w-[90%] relative flex flex-col justify-between items-center rounded-[23px] bg-mainBoxBg">
+                        <div className="w-full flex justify-center gap-[10%] items-center  ">
+                            <p className="  text-white text-[4.5vmin] sm:text-[2.5vmin] font-bold">Earn 2000 G8D</p>
+                            <p className=" text-[#808080] text-[4.5vmin] sm:text-[2.5vmin] font-bold ">{formatTime(time)}</p>
+                        </div>
+                        <div className="w-full relative flex justify-center py-[2%] items-end ">
+                            <div className="w-[80%] h-[1vmin] xs:h-[0.8vmin] sm:h-[0.7vmin] rounded-3xl bg-[#787880] relative ">
+                                <div className="w-full bg-[#007AFF] rounded-3xl h-full absolute left-0" style={{ width: progressWidth }}></div>
+                                <div className="w-[4vmin] sm:w-[2.5vmin] aspect-[1/1] bg-white rounded-full absolute -top-[150%] xs:-top-[200%] sm:-top-[150%]" style={{ left: progressWidth }}></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="w-full h-[35%] flex justify-center items-center relative">
+                    <div className={` h-full w-[90%] px-[3%] py-[5%] rounded-[23px] flex flex-col gap-[2%] justify-between bg-[#B33737]`}>
+                        <div className="w-full h-[80%] px-[3%] rounded-[23px] flex items-center relative">
+                            <div className=" w-[40%] flex justify-between z-10 ">
+                                <div className="w-full aspect-[402/408] relative  ">
+                                    <Image
+                                        src="/image/gday_intro_logo.png"
+                                        alt="main logo"
+                                        layout="fill"
+                                        objectFit="cover"
+                                    />
+                                </div>
+                            </div>
+                            <div className="w-[60%] flex justify-center text-center items-center relative ">
+                                <p className="w-full text-white text-[6vmin] sm:text-[2.5vmin] font-extrabold">Discover Your Destiny with
+                                    AI& Blockchin</p>
+                            </div>
+                        </div>
+                        <div className="w-full h-[15%] flex justify-center relative gap-[5%]  ">
+                            {onClaim ? <div onClick={startTimer} className="w-[45%] rounded-[24px] py-2  flex flex-col justify-center items-center relative bg-[#FFA2A8] active:scale-90 transition-transform duration-100">
+                                <p className=" text-black text-[3.5vmin] sm:text-[1.5vmin] z-10">Claim now</p>
+                            </div> :
+                                <div className="w-[45%] rounded-[24px] py-2  flex flex-col justify-center items-center relative bg-[#FFA2A8] active:scale-90 transition-transform duration-100">
+                                    <p className=" text-black text-[3.5vmin] sm:text-[1.5vmin] z-10">On Claim</p>
+                                </div>
+                            }
+
+                            <Link href="/daily" className="w-[45%] rounded-[24px] py-2 flex flex-col justify-center items-center relative bg-[#34FA9E] active:scale-90 transition-transform duration-100">
+                                <p className=" text-black text-[3.5vmin] sm:text-[1.5vmin]">Get Tickets</p>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+
                 <div className="  w-[90%] h-[13%] flex flex-col gap-[5%] justify-evenly items-center relative">
                     <div className="w-full text-white text-[4vmin] sm:text-[2vmin]">Join Our community</div>
-                    <a href="https://x.com/Ghibli_AI_" target="_blank" rel="noopener noreferrer" className="bg-white rounded-[30px] flex justify-between items-center w-full py-[1%] px-4">
+                    <a href="https://x.com/G8DAI" target="_blank" rel="noopener noreferrer" className="bg-white rounded-[30px] flex justify-between items-center w-full py-[1%] px-4">
                         <div className="w-[8vmin] sm:w-[5vmin] aspect-[60/60] relative  ">
                             <Image
-                                src="/image/sagu_x_icon.png"
+                                src="/image/gday_x_icon.svg"
                                 alt="main logo"
                                 layout="fill"
                                 objectFit="cover"
                             />
                         </div>
-                        <p className="text-black text-[4vmin] sm:text-[2vmin]">Join our X , earn GHIB Point</p>
+                        <p className="text-black text-[4vmin] sm:text-[2vmin]">Join our X , earn G8D Point</p>
                         <p className="text-black h-full opacity-60">...</p>
                     </a>
                 </div>

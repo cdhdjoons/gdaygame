@@ -24,16 +24,16 @@ export default function Intro() {
     return (
         <AnimatePresence mode="wait">
             {showIntro ? (
-                <motion.div className=" z-[99] w-full h-lvh max-w-[500px] max-h-[1080px] bg-black
+                <motion.div className=" z-[99] w-full h-lvh max-w-[500px] max-h-[1080px] bg-[#BD2321]
               flex justify-center items-center overflow-hidden absolute duration-300 "
                     initial={false}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <div className="w-[30vmax] sm:w-[25vmax] aspect-[412/104] relative">
+                    <div className="w-full aspect-[402/408] relative">
                         <Image
-                            src="/image/gday_test_logo.png"
+                            src="/image/gday_intro_logo.png"
                             alt="main logo"
                             layout="fill"
                             objectFit="cover"

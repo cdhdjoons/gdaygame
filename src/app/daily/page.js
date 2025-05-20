@@ -19,7 +19,7 @@ export default function DailyTask() {
     //invite 버튼 5번 클릭 시 포인트 지급 및 비활성화 관리
     const [inviteCount, setInviteCount] = useState(0);
 
-    const manifestUrl = "https://ghibligame.vercel.app/tonconnect-manifest.json";
+    const manifestUrl = "https://gdaygame.vercel.app/tonconnect-manifest.json";
 
 
     useEffect(() => {
@@ -106,21 +106,18 @@ export default function DailyTask() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <div className="w-[90%] h-[30%] px-[3%] py-[1%] flex flex-col justify-between items-start ">
-                        <div className="w-[90%] max-w-[500px] px-[3%] flex flex-col items-start relative ">
-                            <div className="w-[50vmin] sm:w-[40vmin] aspect-[353/99] relative">
-                                <Image
-                                    src="/image/ghibli_title_logo.png"
-                                    alt="main logo"
-                                    layout="fill"
-                                    objectFit="cover"
-                                />
-                                <p className="text-white absolute right-[5%] text-[3.5vmin] sm:text-[2.5vmin] xs:text-[4.5vmin]">Task Center</p>
-                            </div>
+                    <div className="w-[90%] h-[30%] px-[3%] flex flex-col justify-between items-start ">
+                        <div className="w-full aspect-[510/165] relative">
+                            <Image
+                                src="/image/gday_title_logo.png"
+                                alt="main logo"
+                                layout="fill"
+                                objectFit="cover"
+                            />
                         </div>
-                        <div className=" w-full flex flex-col ">
-                            <p className="text-white text-[3vmin] sm:text-[2vmin] xs:text-[4.5vmin]"><span className="font-bold">Use your GHIB to get a Creation Ticket!<br /></span>
-                            With a ticket in hand, you’ll unlock access to our AI-powered image generation tool, create stunning, dreamlike scenes inspired by your imagination.</p>
+                        <div className=" w-full flex flex-col z-10 ">
+                            <p className="text-white text-[3vmin] sm:text-[2vmin] xs:text-[4.5vmin]"><span className="font-bold">Use your G8D to get a Creation Ticket!<br /></span>
+                                With a ticket in hand, you'll unlock access to our AI-powered image generation tool, create stunning, dreamlike scenes inspired by your imagination.</p>
                         </div>
 
                         <Tickets />
@@ -129,9 +126,9 @@ export default function DailyTask() {
                         <div className=" w-full h-full flex flex-col justify-evenly items-center relative gap-2">
                             {/* <p className=" text-[1.5vmax] sm:text-[1.3vmax] text-[#00FF08] font-bold">{remainHours}/24h</p> */}
                             <div className=" w-[90%] relative flex justify-between items-center">
-                                <div className=" w-[13vmin] sm:w-[7vmin] aspect-[98/101] relative ">
+                                <div className=" w-[13vmin] sm:w-[7vmin] aspect-[72/74] relative ">
                                     <Image
-                                        src="/image/ghibli_game.png"
+                                        src="/image/gday_game.png"
                                         alt="meatIcon"
                                         layout="fill"
                                         objectFit="cover"
@@ -145,9 +142,9 @@ export default function DailyTask() {
                             </div>
                             <div className=" w-[90%] px-[5%] flex flex-col justify-center items-center bg-white rounded-[23px]">
                                 <div className=" w-full flex justify-between items-center border-b-[0.5px] border-b-black py-[2%]">
-                                    <div className=" w-[12vmin] sm:w-[6vmin] aspect-[98/101] relative ">
+                                    <div className=" w-[12vmin] sm:w-[6vmin] aspect-[72/74] relative ">
                                         <Image
-                                            src="/image/ghibli_game.png"
+                                            src="/image/gday_game.png"
                                             alt="meatIcon"
                                             layout="fill"
                                             objectFit="cover"
@@ -162,9 +159,9 @@ export default function DailyTask() {
                                     </div>
                                 </div>
                                 <div className=" w-full flex justify-between items-center py-[2%] ">
-                                    <div className=" w-[12vmin] sm:w-[6vmin] aspect-[98/101] relative ">
+                                    <div className=" w-[12vmin] sm:w-[6vmin] aspect-[72/74] relative ">
                                         <Image
-                                            src="/image/ghibli_game.png"
+                                            src="/image/gday_game.png"
                                             alt="meatIcon"
                                             layout="fill"
                                             objectFit="cover"
@@ -174,16 +171,16 @@ export default function DailyTask() {
                                         <p className=" text-[2.1vmax] xs:text-[2.3vmax] sm:text-[2.2vmin] font-bold text-black">RT our Post</p>
                                         <p className=" text-[1.8vmax] xs:text-[1.5vmax] sm:text-[1.9vmin] text-[#C0C0C0]">1 GHIB</p>
                                     </div>
-                                    <a href="https://x.com/Ghibli_AI_" target="_blank" rel="noopener noreferrer" className={` w-[20%] bg-[#767DFF] h-[50%] rounded-3xl relative duration-300 transition-all ${disabledDaily[1] ? 'opacity-100' : 'opacity-20'}`}>
+                                    <a href="https://x.com/G8DAI" target="_blank" rel="noopener noreferrer" className={` w-[20%] bg-[#767DFF] h-[50%] rounded-3xl relative duration-300 transition-all ${disabledDaily[1] ? 'opacity-100' : 'opacity-20'}`}>
                                         <div onClick={() => dailyHandleClick(1, 1000)} className={`w-[40%] duration-300 aspect-[1/1] transition-all rounded-full bg-white absolute top-[50%] -translate-y-[50%] ${disabledDaily[1] ? "-translate-x-[100%] left-full" : "translate-x-0 left-0"}`}></div>
                                     </a>
                                 </div>
                             </div>
 
                             <div className=" w-[90%] relative flex justify-between items-center">
-                                <div className=" w-[14vmin] sm:w-[8vmin] aspect-[98/101] relative ">
+                                <div className=" w-[14vmin] sm:w-[8vmin] aspect-[72/74] relative ">
                                     <Image
-                                        src="/image/ghibli_game.png"
+                                        src="/image/gday_game.png"
                                         alt="meatIcon"
                                         layout="fill"
                                         objectFit="cover"
@@ -197,9 +194,9 @@ export default function DailyTask() {
                             </div>
                             <div className=" w-[90%] px-[5%] flex flex-col justify-center items-center bg-white rounded-[23px]">
                                 <div className=" w-full flex justify-between items-center border-b-[0.5px] border-b-black py-[2%]">
-                                    <div className=" w-[12vmin] sm:w-[6vmin] aspect-[98/101] relative ">
+                                    <div className=" w-[12vmin] sm:w-[6vmin] aspect-[72/74] relative ">
                                         <Image
-                                            src="/image/ghibli_game.png"
+                                            src="/image/gday_game.png"
                                             alt="meatIcon"
                                             layout="fill"
                                             objectFit="cover"
@@ -209,14 +206,14 @@ export default function DailyTask() {
                                         <p className=" text-[2.1vmax] xs:text-[2.3vmax] sm:text-[2.2vmin] font-bold text-black">Follow X</p>
                                         <p className=" text-[1.8vmax] xs:text-[1.5vmax] sm:text-[1.9vmin] text-[#C0C0C0]">1K GHIB</p>
                                     </div>
-                                    <a href="https://x.com/Ghibli_AI_" target="_blank" rel="noopener noreferrer" className={` w-[20%] bg-[#767DFF] h-[50%] rounded-3xl relative duration-300 transition-all ${disabledTask[0] ? 'opacity-100' : 'opacity-20'}`}>
+                                    <a href="https://x.com/G8DAI" target="_blank" rel="noopener noreferrer" className={` w-[20%] bg-[#767DFF] h-[50%] rounded-3xl relative duration-300 transition-all ${disabledTask[0] ? 'opacity-100' : 'opacity-20'}`}>
                                         <div onClick={() => handleClick(0, 1000)} className={`w-[40%] duration-300 aspect-[1/1] transition-all rounded-full bg-white absolute top-[50%] -translate-y-[50%] ${disabledTask[0] ? "-translate-x-[100%] left-full" : "translate-x-0 left-0"}`}></div>
                                     </a>
                                 </div>
                                 <div className=" w-full flex justify-between items-center py-[2%] ">
-                                    <div className=" w-[12vmin] sm:w-[6vmin] aspect-[98/101] relative ">
+                                    <div className=" w-[12vmin] sm:w-[6vmin] aspect-[72/74] relative ">
                                         <Image
-                                            src="/image/ghibli_game.png"
+                                            src="/image/gday_game.png"
                                             alt="meatIcon"
                                             layout="fill"
                                             objectFit="cover"
