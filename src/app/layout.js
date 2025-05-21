@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <body className={`bg-black flex min-h-dvh justify-center m-0 p-0 ${inter.className}`} >
         <div className=" w-full h-screen max-w-[500px] max-h-[1080px] bg-multi-gradient relative flex flex-col justify-between overflow-hidden"
           >
-            <div className=" absolute top-[50%] left-[50%] opacity-50 -translate-x-[50%] -translate-y-[50%] w-[60%] h-[90%] bg-center-gradient rounded-ellipse -rotate-[30deg]
+            <div className=" absolute top-[50%] left-[50%] opacity-50 -translate-x-[50%] -translate-y-[50%] w-[60%] h-[70%] bg-center-gradient rounded-ellipse -rotate-[30deg]
             shadow-[0_0_30px_5px_rgba(255,78,81,0.3)] "></div>
             {children}
           <Analytics />
