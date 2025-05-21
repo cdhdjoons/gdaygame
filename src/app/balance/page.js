@@ -119,8 +119,8 @@ export default function Balance() {
         exit={{ opacity: 0 }}
         transition={{ duration: 1 }}
       >
-        <div className="w-full h-full relative flex flex-col items-center justify-center  " >
-          <div className="w-[90%] max-w-[500px] px-[3%] flex flex-col items-start relative ">
+        <div className="w-full h-full relative flex flex-col items-center justify-center bg-black  " >
+          <div className="w-[90%] max-w-[500px] px-[3%] flex flex-col items-start relative">
             {/* <div className="w-full aspect-[510/165] relative">
               <Image
                 src="/image/gday_title_logo.png"
@@ -130,9 +130,9 @@ export default function Balance() {
               />
             </div> */}
           </div>
-          <div className="w-full h-[90%] flex justify-center items-center relative">
+          <div className="w-full h-[90%] flex justify-center items-center relative ">
             <iframe
-              className={` bg-white h-full w-[95%] p-[1%] rounded-[10px]`}
+              className={` bg-black h-full w-[95%] p-[1%] rounded-[10px] overflow-x-hidden`}
               src="https://www.g8dai.xyz/ai" // 원하는 웹사이트 URL
               title="External Website"
             />

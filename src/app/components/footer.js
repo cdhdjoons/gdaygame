@@ -12,6 +12,7 @@ import { usePathname } from "next/navigation";
 export default function Footer() {
     // const { hasTickets } = useContext(TicketContext);
     const [menuColor, setMenuColor] = useState(0);
+    const [footerBgBlack, setFooterBgBlack] = useState(false);
     const pathname = usePathname()
     // console.log(hasTickets);
 
@@ -29,15 +30,20 @@ export default function Footer() {
     useEffect(() => {
         if (pathname.includes('daily')) {
             setMenuColor(1)
+            setFooterBgBlack(false);
         }
         if (pathname.includes('balance')) {
-            setMenuColor(4)
+            setMenuColor(4);
+            setFooterBgBlack(true);
+        }
+        else {
+            setFooterBgBlack(false);
         }
     }, [pathname])
 
     return (
         <AnimatePresence mode="wait">
-            <motion.div className="  w-full max-w-[500px] flex justify-center items-center px-[2%] "
+            <motion.div className={`w-full max-w-[500px] flex justify-center items-center px-[2%] ${footerBgBlack ? 'bg-black' : '' } duration-1000`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
